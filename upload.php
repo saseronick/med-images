@@ -1,4 +1,10 @@
 <?php
+// Create connection
+$conn = new mysqli(mysql://dd6qc53d5mryf3vl:js2jzlg83v8luuyk@vvfv20el7sb2enn3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/m9hbe5uldju5ppdp);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
